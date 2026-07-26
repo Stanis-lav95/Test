@@ -1,58 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebDeveloperStanislavVidloha_CV</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>WebDeveloperStanislavVidloha_CV</title>
 
-    <link rel="stylesheet" href="/styles/index.css">
-    <link rel="stylesheet" href="/styles/index_adaptive.css">
-</head>
-<body>
+		<link
+			rel="stylesheet"
+			href="styles/index.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="styles/index_adaptive.css"
+		/>
+	</head>
 
-    <div class="container">
+	<body>
+		<div class="container">
+			<div class="aboutMe-wrapper">
+				<img
+					class="aboutMe-img"
+					src="images/Avatar.jpeg"
+					alt="Avatar-Stanislav"
+				/>
 
-        <img class="img" src="images/Avatar.jpeg" alt="Avatar-Stanislav" width="200">
+				<div class="aboutMe-info">
+					<h1 class="aboutMe-title">Stanislav Vidloha</h1>
+					<p class="aboutMe-text">Beginner developer</p>
+				</div>
+			</div>
 
-        <h1 class="title">Stanislav Vidloha</h1>
+			<div class="wrapper">
+				<h2 class="title">Social</h2>
+				<div class="social-links">
+					<a
+						href="https://www.instagram.com/stanislavvidloha/"
+						class="social-link"
+					>
+						<span class="social-type">Instagram</span>
+					</a>
+					<span class="social-line">|</span>
+					<a
+						href="https://www.facebook.com/StanislavVidloha/"
+						class="social-link"
+					>
+						<span class="social-type">Facebook</span>
+					</a>
+					<span class="social-line">|</span>
+					<a
+						href="https://vk.ru/id_stafik95"
+						class="social-link"
+					>
+						<span class="social-type">VK</span>
+					</a>
+				</div>
+			</div>
 
-        <p>Beginner developer</p>
-        <hr>
-        <h2>Social</h2>
-        <ul class="social">
-            <li class="social-tipe"><a href="https://www.instagram.com/stanislavvidloha/" class="social-link">Instagram</a></li>
-            <li class="social-tipe"><a href="https://www.facebook.com/StanislavVidloha/" class="social-link">Facebook</a></li>
-            <li class="social-tipe"><a href="https://vk.ru/id_stafik95" class="social-link">VK</a></li>
-        </ul>
-        <hr>
-        <h2>Hobby</h2>
-        <ol class="hobby">
-            <li class="hobby-type">Trips</li>
-            <li class="hobby-type">Learning something new</li>
-            <li class="hobby-type">Sport</li>
-            <li class="hobby-type">Games</li>
-        </ol>
-        <hr>
-        <h2>Experience</h2>
+			<div class="wrapper">
+				<h2 class="title">Hobby</h2>
+				<ol class="hobby-list">
+					<li class="hobby-type">Trips</li>
+					<li class="hobby-type">Learning something new</li>
+					<li class="hobby-type">Sport</li>
+					<li class="hobby-type">Games</li>
+				</ol>
+			</div>
 
-        <p>freelance</p>
-        <hr>
-        <h2>Contact me</h2>
-        <form action="">
+			<div class="wrapper">
+				<h2 class="title">Experience</h2>
+				<p class="text">freelance</p>
+			</div>
 
-            <label for="name">Your name</label>
-            <input type="text" id="name" placeholder="enter name">
-            <br>
-            <label for="email">Your email</label>
-            <input type="email" id="email" placeholder="enter email">
-            <br>
-            <label for="text">Your text</label>
-            <textarea type="text" id="text" placeholder="enter text"></textarea>
-            <br>
-            <input type="submit" value="Send">
-        </form>
+			<div class="wrapper">
+				<h2 class="title">Contact me</h2>
+				<form action="/">
+					<div class="line-form">
+						<div class="forms">
+							<label for="name">Your name</label>
+							<input
+								type="text"
+								id="name"
+								placeholder="enter name"
+							/>
+						</div>
 
-    </div>
-    
-</body>
+						<div class="forms">
+							<label for="email">Your email</label>
+							<input
+								type="email"
+								id="email"
+								placeholder="enter email"
+							/>
+						</div>
+					</div>
+
+					<div class="forms">
+						<label for="text">Your text</label>
+						<textarea
+							id="text"
+							placeholder="enter text"
+						></textarea>
+						<input
+							type="submit"
+							value="Send"
+						/>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<script src="./scripts/index.js"></script>
+	</body>
 </html>
