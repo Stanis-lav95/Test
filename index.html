@@ -10,11 +10,11 @@
 
 		<link
 			rel="stylesheet"
-			href="styles/index.css"
+			href="/styles/index.css"
 		/>
 		<link
 			rel="stylesheet"
-			href="styles/index_adaptive.css"
+			href="/styles/index_adaptive.css"
 		/>
 	</head>
 
@@ -76,9 +76,12 @@
 
 			<div class="wrapper">
 				<h2 class="title">Contact me</h2>
-				<form action="/">
+				<form
+					class="forms"
+					action="/"
+				>
 					<div class="line-form">
-						<div class="forms">
+						<div class="form">
 							<label for="name">Your name</label>
 							<input
 								type="text"
@@ -87,7 +90,7 @@
 							/>
 						</div>
 
-						<div class="forms">
+						<div class="form">
 							<label for="email">Your email</label>
 							<input
 								type="email"
@@ -97,7 +100,7 @@
 						</div>
 					</div>
 
-					<div class="forms">
+					<div class="form">
 						<label for="text">Your text</label>
 						<textarea
 							id="text"

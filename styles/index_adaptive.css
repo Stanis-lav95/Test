@@ -1,0 +1,75 @@
+@media screen and (max-width: 585px) {
+	.aboutMe-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		margin: 10px 10px 10px 12px;
+	}
+	.aboutMe-img {
+		order: 1;
+	}
+}
+@media screen and (max-width: 447px) {
+	.aboutMe-wrapper {
+		display: flex;
+		align-items: center;
+	}
+	.aboutMe-info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+	.title {
+		text-align: center;
+	}
+	.text {
+		text-align: center;
+	}
+
+	.hobby-list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.social-links {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 427px) {
+	.hobby-list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.hobby-type {
+		max-width: 100%;
+		white-space: normal;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 404px) {
+	.line-form {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+		min-width: 85px;
+	}
+
+	.form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	#text {
+		text-align: center;
+	}
+}

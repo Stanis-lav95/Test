@@ -1,22 +1,41 @@
-var img = document.querySelector('.aboutMe-img');
+var img = document.querySelector('.aboutMe-img')
+
+function handleMove(x, y, rect) {
+	var rotateX = (y / rect.height - 0.5) * 25
+	var rotateY = (x / rect.width - 0.5) * -25
+
+	img.style.transform =
+		'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) scale(1.1)'
+	img.classList.add('hover-effect')
+}
 
 if (img) {
-    img.addEventListener('mousemove', function (e) {
-        var rect = img.getBoundingClientRect();
-        var x = e.clientX - rect.left;
-        var y = e.clientY - rect.top;
+	// ======== МЫШЬ (ПК) ========
+	img.addEventListener('mousemove', function (e) {
+		var rect = img.getBoundingClientRect()
+		var x = e.clientX - rect.left
+		var y = e.clientY - rect.top
 
-        // Увеличенный наклон к курсору
-        var rotateX = (y / rect.height - 0.5) * 25; 
-        var rotateY = (x / rect.width - 0.5) * -25;
+		handleMove(x, y, rect)
+	})
 
-        img.style.transform =
-            'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) scale(1.1)';
-        img.classList.add('hover-effect');
-    });
+	// ======== ТАЧ (МОБИЛЬНЫЕ) ========
+	img.addEventListener('touchmove', function (e) {
+		var rect = img.getBoundingClientRect()
+		var touch = e.touches[0] // первый палец
 
-    img.addEventListener('mouseleave', function () {
-        img.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
-        img.classList.remove('hover-effect');
-    });
+		var x = touch.clientX - rect.left
+		var y = touch.clientY - rect.top
+
+		handleMove(x, y, rect)
+	})
+
+	// ======== СБРОС ЭФФЕКТА ========
+	img.addEventListener('mouseleave', resetTilt)
+	img.addEventListener('touchend', resetTilt)
+
+	function resetTilt() {
+		img.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)'
+		img.classList.remove('hover-effect')
+	}
 }
