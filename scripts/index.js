@@ -10,7 +10,7 @@ function handleMove(x, y, rect) {
 }
 
 if (img) {
-	// ======== МЫШЬ (ПК) ========
+	// ======== MOUSE (PC) ========
 	img.addEventListener('mousemove', function (e) {
 		var rect = img.getBoundingClientRect()
 		var x = e.clientX - rect.left
@@ -19,7 +19,7 @@ if (img) {
 		handleMove(x, y, rect)
 	})
 
-	// ======== ТАЧ (МОБИЛЬНЫЕ) ========
+	// ======== TOUCH (MOBILE) ========
 	img.addEventListener('touchmove', function (e) {
 		var rect = img.getBoundingClientRect()
 		var touch = e.touches[0] // первый палец
@@ -30,7 +30,7 @@ if (img) {
 		handleMove(x, y, rect)
 	})
 
-	// ======== СБРОС ЭФФЕКТА ========
+	// ======== RESET EFFECT ========
 	img.addEventListener('mouseleave', resetTilt)
 	img.addEventListener('touchend', resetTilt)
 
