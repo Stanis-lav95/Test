@@ -117,6 +117,13 @@ body {
 	text-shadow: 0 0 6px #7affb3;
 }
 
+/* EXPERIENCE */
+
+.text:hover {
+	color: #3fbf6f;
+	text-shadow: 0 0 6px #7affb3;
+}
+
 /* FORMS */
 .forms {
 	color: #c8c8ce;
@@ -169,7 +176,7 @@ textarea {
 /* SEND BUTTON */
 .form input[type='submit'] {
 	border-bottom: none;
-	background: #3fbf6f;
+	background: #4fdc82;
 	color: #0f1115;
 	padding: 12px 0;
 	border-radius: 8px;
@@ -187,4 +194,53 @@ textarea {
 /* LAST TITLE CENTER */
 .wrapper:last-of-type .title {
 	text-align: center;
+}
+
+.aboutMe-title {
+	position: relative;
+	display: inline-block;
+	color: #e6e6ea;
+	font-weight: 600;
+}
+
+/* сам текст */
+.aboutMe-title-text {
+	position: relative;
+	display: inline-block;
+	color: #e6e6ea;
+}
+
+/* вспышка по буквам */
+.aboutMe-title-text::after {
+	content: 'Stanislav Vidloha'; /* тот же текст */
+	position: absolute;
+	inset: 0;
+
+	background: linear-gradient(
+		90deg,
+		/* ← движение слева направо */ rgba(63, 191, 111, 0) 0%,
+		/* прозрачный зелёный */ rgba(63, 191, 111, 0.9) 50%,
+		/* яркий зелёный блик */ rgba(63, 191, 111, 0) 100% /* прозрачный */
+	);
+
+	background-size: 200% 100%;
+	background-position: -200% 0;
+
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+
+	animation: aboutMeFlash 4s ease-out forwards;
+	pointer-events: none;
+}
+
+@keyframes aboutMeFlash {
+	0% {
+		background-position: -270% 0; /* старт слева */
+		opacity: 1;
+	}
+	100% {
+		background-position: 170% 0; /* конец справа */
+		opacity: 0; /* исчезает */
+	}
 }
